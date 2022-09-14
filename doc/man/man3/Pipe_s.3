@@ -1,0 +1,118 @@
+.TH "Pipe_s" 3 "Mon Apr 5 2021" "AUSH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Pipe_s \- Pipe structure\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <types\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "int \fBisPipe\fP"
+.br
+.RI "Is this a pipe\&. "
+.ti -1c
+.RI "char * \fBlefthandPipe\fP"
+.br
+.RI "Left hand operand of the pipe\&. "
+.ti -1c
+.RI "char * \fBrighthandPipe\fP"
+.br
+.RI "Right hand operand of the pipe\&. "
+.ti -1c
+.RI "char ** \fBlefthandPipeParsed\fP"
+.br
+.RI "Left hand operand of the pipe (parsed) "
+.ti -1c
+.RI "char ** \fBrighthandPipeParsed\fP"
+.br
+.RI "Right hand operand of the pipe (parsed) "
+.ti -1c
+.RI "\fBAUSH_CMD_FLAG\fP \fBlefthandFlag\fP"
+.br
+.RI "Left hand flag\&. "
+.ti -1c
+.RI "\fBAUSH_CMD_FLAG\fP \fBrighthandFlag\fP"
+.br
+.RI "Right hand flag\&. "
+.ti -1c
+.RI "int \fBleftArgc\fP"
+.br
+.RI "Left hand argument count\&. "
+.ti -1c
+.RI "int \fBrightArgc\fP"
+.br
+.RI "Right hand argument count\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Pipe structure\&. 
+
+This struct holds the data for a single pipe 
+.PP
+Definition at line 66 of file types\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "int isPipe"
+
+.PP
+Is this a pipe\&. Used for checking if the input command was pared to a pipe\&. If this value is 1 all the others are null 
+.PP
+Definition at line 73 of file types\&.h\&.
+.SS "int leftArgc"
+
+.PP
+Left hand argument count\&. The amount of arguments in the parsed lefthand string array 
+.PP
+Definition at line 122 of file types\&.h\&.
+.SS "\fBAUSH_CMD_FLAG\fP lefthandFlag"
+
+.PP
+Left hand flag\&. This is the flag set for the lefthand side of the pipe 
+.PP
+Definition at line 108 of file types\&.h\&.
+.SS "char* lefthandPipe"
+
+.PP
+Left hand operand of the pipe\&. This is a ptr to the string holding the unparsed lefthand side of the pipe 
+.PP
+Definition at line 80 of file types\&.h\&.
+.SS "char** lefthandPipeParsed"
+
+.PP
+Left hand operand of the pipe (parsed) This is a ptr to the string array holding the parsed lefthand side of the pipe 
+.PP
+Definition at line 94 of file types\&.h\&.
+.SS "int rightArgc"
+
+.PP
+Right hand argument count\&. The amount of arguments in the parsed righthand string array 
+.PP
+Definition at line 129 of file types\&.h\&.
+.SS "\fBAUSH_CMD_FLAG\fP righthandFlag"
+
+.PP
+Right hand flag\&. This is the flag set for the righthand side of the pipe 
+.PP
+Definition at line 115 of file types\&.h\&.
+.SS "char* righthandPipe"
+
+.PP
+Right hand operand of the pipe\&. This is a ptr to the string holding the unparsed righthand side of the pipe 
+.PP
+Definition at line 87 of file types\&.h\&.
+.SS "char** righthandPipeParsed"
+
+.PP
+Right hand operand of the pipe (parsed) This is a ptr to the string array holding the parsed righthand side of the pipe 
+.PP
+Definition at line 101 of file types\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AUSH from the source code\&.

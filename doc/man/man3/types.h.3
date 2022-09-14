@@ -1,0 +1,91 @@
+.TH "C:/Users/aurib/source/Repos/TFO-SYS_TP-Projects/TP/AUSH/src/types.h" 3 "Mon Apr 5 2021" "AUSH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/aurib/source/Repos/TFO-SYS_TP-Projects/TP/AUSH/src/types.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBPipe_s\fP"
+.br
+.RI "Pipe structure\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAXCMD\fP   1000"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBAUSH_Flags\fP \fBAUSH_CMD_FLAG\fP"
+.br
+.RI "Flags for internal command states\&. "
+.ti -1c
+.RI "typedef struct \fBPipe_s\fP \fBpipe_t\fP"
+.br
+.RI "Pipe structure\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBAUSH_Flags\fP { \fBnone_f\fP, \fBexit_f\fP, \fBretLastExit_f\fP, \fBcd_f\fP, \fBpipe_f\fP, \fBdefault_f\fP }"
+.br
+.RI "Flags for internal command states\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MAXCMD   1000"
+The max length of a command that can be input 
+.PP
+Definition at line 7 of file types\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBAUSH_Flags\fP \fBAUSH_CMD_FLAG\fP"
+
+.PP
+Flags for internal command states\&. This flags are set after parsing a command to get the type of command to execute 
+.SS "typedef struct \fBPipe_s\fP \fBpipe_t\fP"
+
+.PP
+Pipe structure\&. This struct holds the data for a single pipe 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBAUSH_Flags\fP"
+
+.PP
+Flags for internal command states\&. This flags are set after parsing a command to get the type of command to execute 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fInone_f \fP\fP
+Unset\&. This flag is the default / unset value 
+.TP
+\fB\fIexit_f \fP\fP
+Exit invoced\&. This flag is set when the user inputs the exit command, because this one is treated differently 
+.TP
+\fB\fIretLastExit_f \fP\fP
+Return last exit code\&. This flag is set if the user input the ret? command\&. Currently this command is work in progress 
+.TP
+\fB\fIcd_f \fP\fP
+Change dir\&. This flag is set if the user input the cd command, because this one is treated differently 
+.TP
+\fB\fIpipe_f \fP\fP
+Pipe\&. This flag is set if the user input a pipe and the shell must then act accordingly\&. This feature is not implemented yet 
+.TP
+\fB\fIdefault_f \fP\fP
+Default\&. This flag is set when the user inputs any not shell specific command hat can be normally executed via execvp 
+.PP
+Definition at line 15 of file types\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AUSH from the source code\&.

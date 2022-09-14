@@ -1,0 +1,70 @@
+.TH "C:/Users/aurib/source/Repos/TFO-SYS_TP-Projects/TP/AUSH/src/aush.c" 3 "Mon Apr 5 2021" "AUSH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/aurib/source/Repos/TFO-SYS_TP-Projects/TP/AUSH/src/aush.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <sys/wait\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <pwd\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'util\&.h'\fP
+.br
+\fC#include 'types\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDEBUG_TOKENS\fP   0"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBexeChild\fP (char *, char *[], int *)"
+.br
+.ti -1c
+.RI "void \fBspawnProc\fP (int in, int out, char *cmd, char **args, \fBAUSH_CMD_FLAG\fP flag, int *lastRet)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DEBUG_TOKENS   0"
+
+.PP
+Definition at line 11 of file aush\&.c\&.
+.SH "Function Documentation"
+.PP 
+.SS "void exeChild (char * cmd, char * args[], int * lastRet)"
+
+.PP
+Definition at line 145 of file aush\&.c\&.
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Definition at line 16 of file aush\&.c\&.
+.SS "void spawnProc (int in, int out, char * cmd, char ** args, \fBAUSH_CMD_FLAG\fP flag, int * lastRet)"
+
+.PP
+Definition at line 167 of file aush\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AUSH from the source code\&.

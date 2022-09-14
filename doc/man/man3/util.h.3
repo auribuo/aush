@@ -1,0 +1,288 @@
+.TH "C:/Users/aurib/source/Repos/TFO-SYS_TP-Projects/TP/AUSH/src/util.h" 3 "Mon Apr 5 2021" "AUSH" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/aurib/source/Repos/TFO-SYS_TP-Projects/TP/AUSH/src/util.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBAUSH_COUNT\fP   2"
+.br
+.RI "Amount of shell specific commands\&. "
+.ti -1c
+.RI "#define \fBCOLOR_RED\fP   '\\x1b[31m'"
+.br
+.RI "Color format code for red\&. "
+.ti -1c
+.RI "#define \fBCOLOR_GREEN\fP   '\\x1b[32m'"
+.br
+.RI "Color format code for green\&. "
+.ti -1c
+.RI "#define \fBCOLOR_YELLOW\fP   '\\x1b[33m'"
+.br
+.RI "Color format code for yellow\&. "
+.ti -1c
+.RI "#define \fBCOLOR_BLUE\fP   '\\x1b[34m'"
+.br
+.RI "Color format code for blue\&. "
+.ti -1c
+.RI "#define \fBCOLOR_MAGENTA\fP   '\\x1b[35m'"
+.br
+.RI "Color format code for magenta\&. "
+.ti -1c
+.RI "#define \fBCOLOR_CYAN\fP   '\\x1b[36m'"
+.br
+.RI "Color format code for cyan\&. "
+.ti -1c
+.RI "#define \fBCOLOR_RESET\fP   '\\x1b[00m'"
+.br
+.RI "Color format code for resetting the color\&. "
+.ti -1c
+.RI "#define \fBCMD_PROMPT\fP   '$'"
+.br
+.RI "Prompt symbol in the shell\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpipe_t\fP \fBparseInput\fP (char *, char *[], int, \fBAUSH_CMD_FLAG\fP *)"
+.br
+.RI "Parses the input\&. "
+.ti -1c
+.RI "int \fBcountChar\fP (char *, char)"
+.br
+.RI "Counts chr in input\&. "
+.ti -1c
+.RI "int \fBcontains\fP (char *, char)"
+.br
+.RI "Is chr in input\&. "
+.ti -1c
+.RI "void \fBsetFlag\fP (char *, \fBAUSH_CMD_FLAG\fP *)"
+.br
+.RI "Set the Flag\&. "
+.ti -1c
+.RI "void \fBexe\fP (char *, char *[], int *)"
+.br
+.RI "Executes a command\&. "
+.ti -1c
+.RI "int \fBgetUserInput\fP (char *)"
+.br
+.RI "Gets the User Input\&. "
+.ti -1c
+.RI "char * \fBgetPrompt\fP ()"
+.br
+.RI "Gets the Prompt\&. "
+.ti -1c
+.RI "void \fBremoveWhitespaces\fP (char *)"
+.br
+.RI "Removes spaces around str\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define AUSH_COUNT   2"
+
+.PP
+Amount of shell specific commands\&. 
+.PP
+Definition at line 6 of file util\&.h\&.
+.SS "#define CMD_PROMPT   '$'"
+
+.PP
+Prompt symbol in the shell\&. 
+.PP
+Definition at line 14 of file util\&.h\&.
+.SS "#define COLOR_BLUE   '\\x1b[34m'"
+
+.PP
+Color format code for blue\&. 
+.PP
+Definition at line 10 of file util\&.h\&.
+.SS "#define COLOR_CYAN   '\\x1b[36m'"
+
+.PP
+Color format code for cyan\&. 
+.PP
+Definition at line 12 of file util\&.h\&.
+.SS "#define COLOR_GREEN   '\\x1b[32m'"
+
+.PP
+Color format code for green\&. 
+.PP
+Definition at line 8 of file util\&.h\&.
+.SS "#define COLOR_MAGENTA   '\\x1b[35m'"
+
+.PP
+Color format code for magenta\&. 
+.PP
+Definition at line 11 of file util\&.h\&.
+.SS "#define COLOR_RED   '\\x1b[31m'"
+
+.PP
+Color format code for red\&. 
+.PP
+Definition at line 7 of file util\&.h\&.
+.SS "#define COLOR_RESET   '\\x1b[00m'"
+
+.PP
+Color format code for resetting the color\&. 
+.PP
+Definition at line 13 of file util\&.h\&.
+.SS "#define COLOR_YELLOW   '\\x1b[33m'"
+
+.PP
+Color format code for yellow\&. 
+.PP
+Definition at line 9 of file util\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "int contains (char * input, char chr)"
+
+.PP
+Is chr in input\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP The string to check 
+.br
+\fIchr\fP The char to check for 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 1 if the string contains chr else 0 
+.RE
+.PP
+
+.PP
+Definition at line 238 of file util\&.c\&.
+.SS "int countChar (char * input, char chr)"
+
+.PP
+Counts chr in input\&. Counts the occurences of the char chr in the string input\&. The search is case sensitive
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP The input string 
+.br
+\fIchr\fP The char to search 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int The amount of times chr occures in input 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file util\&.c\&.
+.SS "void exe (char * cmd, char * args[], int * lastRet)"
+
+.PP
+Executes a command\&. Executes the command with the passed arguments and sets the return value\&. The args array has to be null terminated
+.PP
+\fBParameters\fP
+.RS 4
+\fIcmd\fP The command to execute 
+.br
+\fIargs\fP The argument list\&. The first is the same as cmd and the last has to be NULL 
+.br
+\fIlastRet\fP The pointer to the integer holding the last exit code 
+.RE
+.PP
+
+.PP
+Definition at line 281 of file util\&.c\&.
+.SS "char* getPrompt ()"
+
+.PP
+Gets the Prompt\&. Creates the shell prompt and returns the pointer to it\&. The string is allocated with malloc() so you want to free() it after
+.PP
+\fBReturns\fP
+.RS 4
+char* The shell prompt 
+.RE
+.PP
+
+.PP
+Definition at line 333 of file util\&.c\&.
+.SS "int getUserInput (char * out)"
+
+.PP
+Gets the User Input\&. Promps for the input using readline() from GNU libreadline and copies the input into out
+.PP
+\fBParameters\fP
+.RS 4
+\fIout\fP The pointer to copy the input to 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 1 if the input was taken correctly else 0 
+.RE
+.PP
+
+.PP
+Definition at line 305 of file util\&.c\&.
+.SS "\fBpipe_t\fP parseInput (char * cmd, char * out[], int argCount, \fBAUSH_CMD_FLAG\fP * flag)"
+
+.PP
+Parses the input\&. Takes an input string and parses the string returning a full pipe struct if the input was a pipe else it writes the args into the out array\&. The pipe functionality is not yet implemented and will lead to a crash
+.PP
+\fBParameters\fP
+.RS 4
+\fIcmd\fP The input to parse 
+.br
+\fIout\fP The array of args to write to if the input isn't a pipe 
+.br
+\fIargCount\fP The amount of arguments in the input 
+.br
+\fIflag\fP The pointer to the flag to set according to the parsing 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+pipe_t Returns a filled or empty pipe struct 
+.RE
+.PP
+
+.PP
+Definition at line 145 of file util\&.c\&.
+.SS "void removeWhitespaces (char * str)"
+
+.PP
+Removes spaces around str\&. Removes leading and trailing whitespace characters from the string s
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP The string to remove the spaces from 
+.RE
+.PP
+
+.PP
+Definition at line 416 of file util\&.c\&.
+.SS "void setFlag (char * cmd, \fBAUSH_CMD_FLAG\fP * flag)"
+
+.PP
+Set the Flag\&. Sets the flag according to the input\&. Only sets flags for shell specific commands
+.PP
+\fBParameters\fP
+.RS 4
+\fIcmd\fP The command to check 
+.br
+\fIflag\fP The pointer to the flag to set 
+.RE
+.PP
+
+.PP
+Definition at line 252 of file util\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AUSH from the source code\&.
